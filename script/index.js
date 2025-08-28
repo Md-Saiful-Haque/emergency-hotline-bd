@@ -31,7 +31,7 @@ const callBtns = document.getElementsByClassName("btn-call");
             alert(`Calling ${cardTitle} ${callNumber}...`)
         }
         else{
-            alert("You don't have sufficient coins.")
+            alert("You don't have sufficient coins. It will take at least 20 coins to make a call")
         }
         getElement("coin-number").innerText = coinNumber;
 
@@ -42,11 +42,11 @@ const callBtns = document.getElementsByClassName("btn-call");
         newHistory.innerHTML = `
         <div class="flex justify-between items-center mt-4 bg-[#FAFAFA] gap-y-2 p-2">
                     <div>
-                        <h2 class="text-[18px] font-semibold">${cardTitle}</h2>
-                        <span class="text-[#5C5C5C] text-[18px]">${callNumber}</span>
+                        <h2 class="text-[16px] font-semibold">${cardTitle}</h2>
+                        <span class="text-[#5C5C5C] text-[16px]">${callNumber}</span>
                     </div>
                     <div>
-                        <span class="text-[18px] font-normal">${new Date().toLocaleTimeString()}</span>
+                        <span class="text-[16px] font-normal">${new Date().toLocaleTimeString()}</span>
                     </div>
                 </div>
         `
@@ -61,6 +61,25 @@ getElement("btn-clear").addEventListener("click", function(){
     const callHistoryContainer = getElement("call-history-container");
     callHistoryContainer.innerHTML = "";
 })
+
+// copy btn functionality
+
+const copyBtns = document.getElementsByClassName("btn-copy");
+
+for(const copyBtn of copyBtns){
+    copyBtn.addEventListener("click", function(){
+        const copyNumber = getElement("count-copy-number").innerText;
+        const copyCountNumber = Number(copyNumber) + 1;
+        getElement("count-copy-number").innerText = copyCountNumber;
+
+        const helplineNumber = copyBtn.parentNode.parentNode.children[3].innerText;
+        
+        navigator.clipboard.writeText(helplineNumber).then(() => {
+            alert("The number has been copied:" + helplineNumber);
+
+        })
+    })
+}
 
 
 
