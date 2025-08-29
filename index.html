@@ -9,24 +9,26 @@
     <!--font-awesome cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-[#f5fff6]">
+<body>
     <header>
-        <nav class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center mt-5 bg-[#ffffff]">
+        <nav class="bg-[#ffffff]">
+          <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center mt-5">
             <div class="flex gap-2">
-                <img src="./assets/logo.png" alt="" class="w--[50px] h-[50px]">
+                <img src="./assets/logo.png" alt="" class="w-[50px] h-[50px]">
                 <h1 class="text-[#006747] font-extrabold">Emergency<br>Service</h1>
             </div>
             <div class="flex gap-1 md:gap-10">
-                <div class="flex bg-[#41ff6b1a] rounded-[50px] px-10 py-3 gap-2">
-                    <p id="heart-number">0</p>
+                <div class="flex items-center bg-[#41ff6b1a] rounded-[50px] px-10 py-3 gap-2">
+                    <p id="heart-number" class="text-[16px] font-bold">0</p>
                     <img src="./assets/heart.png" alt="" class="w-8">
                 </div>
-                <div class="flex bg-[#41ff6b1a] rounded-[50px] px-10 py-3 gap-2">
-                    <p id="coin-number">100</p>
+                <div class="flex items-center bg-[#41ff6b1a] rounded-[50px] px-10 py-3 gap-2">
+                    <p id="coin-number" class="text-[16px] font-bold">100</p>
                     <img src="./assets/coin.png" alt="" class="w-8">
                 </div>
                 <button class="bg-[#00A63E] text-white px-10 py-3 rounded-[50px] border-none text-[16px] font-semibold"><span id="count-copy-number">0</span> Copy</button>
             </div>
+           </div> 
         </nav>
         <div class="hero-section bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] w-full flex justify-center mt-5 p-4">
           <div class="text-center max-w-[1250px] mx-auto text-white">  
@@ -36,9 +38,9 @@
           </div>  
         </div>
     </header>
-    <main>
+    <main class="bg-[#f5fff6]">
         <!-- card section -->
-        <section class="mt-10 max-w-[1440px] mx-auto mb-16 md:grid grid-cols-13">
+        <section class="mt-10 max-w-[1440px] mx-auto mb-16 md:grid grid-cols-13 px-4 md:px-0">
             <div class="all-card col-span-10 grid grid-cols-1 md:grid-cols-3 gap-5">
                 <!-- card 1 -->
                 <div class="card shadow-[0_2px_3px_rgba(0,0,0,0.15)] rounded-[12px] bg-[#ffffff] p-5">
@@ -195,7 +197,7 @@
                 </div>
 
             </div>
-            <aside class="col-span-3 ml-5 shadow-[0_2px_3px_rgba(0,0,0,0.15)] bg-[#ffffff] rounded-[12px] p-4">
+            <aside class="col-span-3 ml-5 shadow-[0_2px_3px_rgba(0,0,0,0.15)] bg-[#ffffff] rounded-[12px] p-4 mt-5 md:mt-0">
                 <div class="flex justify-between items-center">
                     <p class="text-[20px] font-medium"><i class="fa-regular fa-clock"></i> Call History</p>
                     <button id="btn-clear" class="bg-[#00A63E] text-white py-2 px-8 rounded-[50px] border-none">Clear</button>

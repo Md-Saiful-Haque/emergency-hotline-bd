@@ -32,6 +32,7 @@ const callBtns = document.getElementsByClassName("btn-call");
         }
         else{
             alert("You don't have sufficient coins. It will take at least 20 coins to make a call")
+            return
         }
         getElement("coin-number").innerText = coinNumber;
 
@@ -82,7 +83,9 @@ for(const copyBtn of copyBtns){
 }
 
 
-
+// .catch(err => {
+//                 console.error("Failed to copy: ", err);
+//             });
 
 
 
