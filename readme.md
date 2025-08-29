@@ -18,7 +18,7 @@ Ans: *getElementById: It is most specific. Its purpose is to choose one element 
 2. How do you **create and insert a new element into the DOM**?
 
 Ans: At first write the HTML code : 
-<html>
+```<html>
 <head>
     <title>Document</title>
 </head>
@@ -29,17 +29,18 @@ Ans: At first write the HTML code :
 </html> 
 
 Javascript part :
+
 Step-1: take parent element by id
-const sectionContainer = document.getElementById("section-container")
+```const sectionContainer = document.getElementById("section-container")
 
 step-2: Create the element
-const h1 = document.createElement("h1");
+```const h1 = document.createElement("h1");
 
 step-3: Add content
-h1.innerText = "I am a web developer"
+```h1.innerText = "I am a web developer"
 
 step-4: Insert
-sectionContainer.appendChild(h1);
+```sectionContainer.appendChild(h1);
 
 3. What is **Event Bubbling** and how does it work?
 
@@ -53,10 +54,10 @@ When a click on an element (the target element), the browser responds to the eve
 Ans: Event delegation is a technique in JavaScript where, instead of adding separate event listeners to multiple child elements, you add a single event listener to their parent element. When an event, such as a click, occurs on a child element, it "bubbles up" to its parent, and the parent's event listener catches it. Then, by using the event object's target property, you can determine exactly which child element triggered the event.
 
 It is useful because :
-.Putting just one listener instead of many uses less memory.
-.For better performance.
-.If new child elements are added to the DOM later, don't need to add a separate listener for each. The parent's listener will work.
-.The code is clearer and simpler to maintain when there are fewer listeners.
+1. Putting just one listener instead of many uses less memory.
+2. For better performance.
+3. If new child elements are added to the DOM later, don't need to add a separate listener for each. The   parent's listener will work.
+4. The code is clearer and simpler to maintain when there are fewer listeners.
 
 
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
@@ -69,3 +70,7 @@ ex: e.stopPropagation();
 
 ---
 
+## 👤 Author
+**Md Saiful Haque**
+
+---
