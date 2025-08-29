@@ -83,10 +83,6 @@ for(const copyBtn of copyBtns){
 }
 
 
-// .catch(err => {
-//                 console.error("Failed to copy: ", err);
-//             });
-
 
 
 
