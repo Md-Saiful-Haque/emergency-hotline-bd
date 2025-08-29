@@ -21,7 +21,7 @@ Ans: At first write the HTML code :
 
 ```<section id="section-container"></section>```
 
-** Javascript part :**
+**Javascript part :**
 
 Step-1: take parent element by id :
 const sectionContainer = document.getElementById("section-container")
@@ -32,7 +32,7 @@ const h1 = document.createElement("h1");
 step-3: Add content :
 h1.innerText = "I am a web developer"
 
-step-4: Insert
+step-4: Insert :
 sectionContainer.appendChild(h1);
 
 3. What is **Event Bubbling** and how does it work?
