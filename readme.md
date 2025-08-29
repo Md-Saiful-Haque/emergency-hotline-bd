@@ -18,7 +18,7 @@ Ans: *getElementById: It is most specific. Its purpose is to choose one element 
 2. How do you **create and insert a new element into the DOM**?
 
 Ans: At first write the HTML code : 
-```<html>
+`<html>
 <head>
     <title>Document</title>
 </head>
@@ -26,21 +26,21 @@ Ans: At first write the HTML code :
     <section id="section-container"></section>
     <script src="./test.js"></script>
 </body>
-</html> 
+</html>`
 
-Javascript part :
+** Javascript part :**
 
 Step-1: take parent element by id
-```const sectionContainer = document.getElementById("section-container")
+const sectionContainer = document.getElementById("section-container")
 
 step-2: Create the element
-```const h1 = document.createElement("h1");
+const h1 = document.createElement("h1");
 
 step-3: Add content
-```h1.innerText = "I am a web developer"
+h1.innerText = "I am a web developer"
 
 step-4: Insert
-```sectionContainer.appendChild(h1);
+sectionContainer.appendChild(h1);
 
 3. What is **Event Bubbling** and how does it work?
 
